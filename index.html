@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Page</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="final.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <!-- jQuery & Plugins -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="top">
+    <div class="header"><h1>Travel</h1></div>
+    <div class="navigation">
+      <a href="#home">Home</a>
+      <a href="#About">About</a>
+      <a href="#Popular">Popular</a>
+      <a href="#Explore">Explore</a>
+      <a href="#faq">FAQ</a>
+      <a href="#inspiration">Quotes</a>
+      <a href="#weather">Weather</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="#map">Map</a>
+    </div>
+  </div>
+
+  <div class="theme-toggle">
+    <label><input type="checkbox" id="toggleTheme"> Dark Mode</label>
+  </div>
+
+  <section id="home" class="hero">
+    <div class="content">
+      <h2>Welcome to Travel</h2>
+      <h1>Explore the world</h1>
+      <h3>Live the trips around the world discovering new adventures,<br>islands, mountains, much more.</h3>
+      <button id="startJourneyBtn">Start your Journey →</button>
+
+    </div>
+  </section>
+
+  <section id="About" class="about-section">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>At <strong>Travel</strong>, we believe that every journey tells a story. <br><br>We curate experiences that go beyond the typical itinerary.</p>
+        <button>Learn More</button>
+        <div id="more-info"></div>
+      </div>
+      <div class="about-image">
+        <img src="images/join-island.jpg" alt="Island Image">
+      </div>
+    </div>
+  </section>
+  <section id="travelNoteArea" style="text-align: center; padding: 50px 20px;">
+    <h2> Travel Note</h2>
+    <textarea id="travelNote" placeholder="Write about your dream trip..."></textarea>
+  </section>
+  
+  
+  
+  <section id="Popular" class="popular-section">
+    <h2>Popular Destinations</h2>
+    <div class="popular-gallery">
+      <div class="image-box">
+        <a href="images/home-beach.jpg" data-lightbox="destinations" data-title="Crystal Beach, Bahamas">
+          <img src="images/home-beach.jpg" alt="Beach" />
+        </a>
+      </div>
+      <div class="image-box">
+        <a href="images/home-trees.jpg" data-lightbox="destinations" data-title="Mystic Forest, Oregon">
+          <img src="images/home-trees.jpg" alt="Forest" />
+        </a>
+      </div>
+      <div class="image-box">
+        <a href="images/home-lake.jpg" data-lightbox="destinations" data-title="Serene Lake, Switzerland">
+          <img src="images/home-lake.jpg" alt="Lake" />
+        </a>
+      </div>
+      <div class="image-box">
+        <a href="images/home-mountain.jpg" data-lightbox="destinations" data-title="Golden Peaks, Colorado">
+          <img src="images/home-mountain.jpg" alt="Mountains" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="Explore" class="explore-section">
+    <h2>Explore More</h2>
+   
+    <div class="explore-gallery">
+      <div class="image-box">
+        <a href="images/popular-forest.jpg" data-lightbox="explore" data-title="Forest Adventures, Vancouver Island">
+          <img src="images/popular-forest.jpg" alt="Forest" />
+        </a>
+      </div>
+      <div class="image-box">
+        <a href="images/popular-lake.jpg" data-lightbox="explore" data-title="Lakeside Retreat, Canada">
+          <img src="images/popular-lake.jpg" alt="Lake" />
+        </a>
+      </div>
+      <div class="image-box">
+        <a href="images/popular-mountain.jpg" data-lightbox="explore" data-title="Mountain Trails, Nepal">
+          <img src="images/popular-mountain.jpg" alt="Mountains" />
+        </a>
+      </div>
+    </div>
+    
+      
+    </section>
+    
+  
+
+  <section id="faq" class="faq-section">
+    <h2>Travel FAQs</h2>
+    <div id="accordion">
+      <h3>What documents do I need for international travel?</h3>
+      <div><p>You usually need a valid passport and visa. Some countries also require proof of vaccination.</p></div>
+      <h3>How far in advance should I book flights?</h3>
+      <div><p>It’s best to book international flights 2–6 months in advance for the best deals.</p></div>
+      <h3>Is travel insurance necessary?</h3>
+      <div><p>Yes, it covers unexpected cancellations, emergencies, and lost baggage.</p></div>
+    </div>
+    
+    
+
+
+
+  </section>
+
+  <div id="dragBox" class="draggable-box">
+    Drag me around the page!
+  </div>
+
+  <section id="inspiration" class="inspiration-section">
+    <h2> Travel Thought of the Day</h2>
+    <button id="getQuote">Get Inspiration</button>
+    <p id="loadingMsg" style="display:none;">Loading quote...</p>
+    <div id="quoteBox"></div>
+  </section>
+ 
+  
+  <section id="weather" class="weather-section">
+    <h2>🌦️ Check Local Weather</h2>
+    <p>Enter a city to get real-time weather updates</p>
+    <input type="text" id="cityInput" placeholder="e.g., Paris, Tokyo, Delhi" />
+    <button id="getWeather">Get Weather</button>
+    <div id="weatherResult"></div>
+  </section>
+
+  <section id="testimonials" class="testimonial-section">
+    <h2> Traveler Testimonials</h2>
+    <div id="tabs">
+      <ul>
+        <li><a href="#tab-1">Adventure</a></li>
+        <li><a href="#tab-2">Family</a></li>
+        <li><a href="#tab-3">Solo</a></li>
+      </ul>
+      <div id="tab-1">
+        <p>“Best adrenaline-filled experience! The mountain trails were breathtaking.” – Alex</p>
+      </div>
+      <div id="tab-2">
+        <p>“We had the perfect family vacation. Safe, fun, and filled with memories!” – The Patels</p>
+      </div>
+      <div id="tab-3">
+        <p>“Traveling solo was never this empowering. Met so many wonderful people.” – Priya</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p class="contact-subtext">We'd love to hear from you!</p>
+    <form id="contactForm" novalidate>
+      <input type="text" name="username" id="username" placeholder="Your Name" required />
+      <input type="email" name="email" id="email" placeholder="Your Email" required />
+      <input type="text" id="travelDate" placeholder="Choose your travel date" />
+      <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="thankYouMsg"></p>
+  </section>
+
+  <section id="map" class="map-section">
+    <h2> Our Location</h2>
+    <div id="googleMap"></div>
+  </section>
+
+  <!-- Google Maps Script -->
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALPzhfX20b4rOls7sD5PzdNTwIcdpwo8U&callback=initMap">
+</script>
+
+
+</body>
+</html>

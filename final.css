@@ -1,0 +1,627 @@
+  /* ---------- GLOBAL STYLES ---------- */
+  body {
+      background-image: url("images/a.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    body.dark {
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+    
+    body.dark a {
+      color: #ffd700;
+    }
+    
+    body.dark .hero::before {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .theme-toggle {
+      text-align: right;
+      margin: 10px 20px;
+      font-size: 1rem;
+    }
+    
+    /* ---------- NAVIGATION & HEADER ---------- */
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      padding: 10px 0;
+    }
+    
+    
+    .header h1 {
+      color: white;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px black;
+      margin-left: 100px;
+    }
+    
+    .navigation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      margin-right: 50px;
+    }
+    
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    
+    .navigation a:hover {
+      background-color: #ffd700;
+      color: black;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      background-image: url('your-image.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-left: 100px;
+      color: white;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    
+    .content h1 {
+      font-size: 4rem;
+      margin: 10px 0;
+    }
+    
+    .content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    
+    .content button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .content button:hover {
+      background-color: #ffd700;
+    }
+    
+    /* ---------- ABOUT SECTION ---------- */
+    .about-section {
+      padding: 100px 60px;
+      background-color: #ffffff;
+      color: #222;
+    }
+    
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .about-text,
+    .about-image {
+      flex: 1 1 400px;
+    }
+    
+    .about-text h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #000;
+    }
+    
+    .about-text p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .about-text button {
+      padding: 12px 25px;
+      background-color: #FFD700;
+      border: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .about-text button:hover {
+      background-color: #e6c200;
+    }
+    
+    .about-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
+    
+    /* ---------- POPULAR DESTINATIONS ---------- */
+    .popular-section {
+      padding: 100px 60px;
+      background-color: #f2f2f2;
+      color: #333;
+      text-align: center;
+    }
+    
+    .popular-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      color: #000;
+    }
+    
+    .popular-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .popular-gallery a img {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .popular-gallery a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* ---------- EXPLORE SECTION ---------- */
+    .explore-section {
+      padding: 100px 60px;
+      background-color: #ffffff;
+      text-align: center;
+      color: #222;
+    }
+    
+    .explore-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+    }
+    
+    .explore-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .explore-gallery a img {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .explore-gallery a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* ---------- CONTACT SECTION ---------- */
+    .contact-section {
+      padding: 100px 20px;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+    
+    #contactForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    #contactForm input,
+    #contactForm textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      border-radius: 6px;
+    }
+    
+    #contactForm textarea {
+      height: 120px;
+      resize: vertical;
+    }
+    
+    #contactForm button {
+      background-color: #ffd700;
+      border: none;
+      color: black;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    #contactForm button:hover {
+      background-color: #e6c200;
+    }
+    
+    #thankYouMsg {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: green;
+      display: none;
+    }
+    
+    label.error {
+      color: red;
+      font-size: 0.9rem;
+      text-align: left;
+      width: 100%;
+    }
+    
+    /* ---------- QUOTE BOX ---------- */
+    .inspiration-section {
+      padding: 80px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+    
+    #quoteBox {
+      margin: 20px auto 0;
+      max-width: 600px;
+      background-color: #fff8dc;
+      border-left: 5px solid #ffd700;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      color: #444;
+      display: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    #quoteBox p {
+      margin-top: 10px;
+      text-align: right;
+      font-style: italic;
+      font-weight: bold;
+    }  margi
+    
+    #loadingMsg {
+      color: #555;
+    n-top: 10px;
+    }
+    /* =============================
+    FAQ Accordion Section Styling
+    ============================= */
+
+  .faq-section {
+      padding: 100px 40px;
+      background-color: #ffffff;
+      color: #222;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    .faq-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: #000;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Style the Accordion Container */
+    #accordion {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    
+    /* Optional override to jQuery UI for cleaner look */
+    .ui-accordion .ui-accordion-header {
+      background: #ffd700;
+      color: #000;
+      padding: 14px 20px;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .ui-accordion .ui-accordion-header:hover {
+      background-color: #e6c200;
+    }
+    
+    .ui-accordion .ui-accordion-content {
+      padding: 16px 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fdfdfd;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .draggable-box {
+      width: 250px;
+      background-color: #ffd700;
+      color: #000;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: move;
+      position: absolute;
+      top: 200px;
+      left: 100px;
+      font-weight: bold;
+      text-align: center;
+      z-index: 999;
+    }
+    
+    .weather-section {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #004d40;
+    }
+    
+    .weather-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .weather-section input#cityInput {
+      padding: 12px 18px;
+      font-size: 1rem;
+      width: 60%;
+      max-width: 300px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .weather-section button#getWeather {
+      padding: 12px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    
+    .weather-section button#getWeather:hover {
+      background-color: #004d40;
+    }
+    
+    #weatherResult {
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #004d40;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    
+    
+    
+    .testimonial-section {
+      padding: 80px 20px;
+      background-color: #fffef0;
+      color: #222;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    .testimonial-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+    }
+    
+    #tabs {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    
+    #tabs .ui-tabs-nav {
+      padding: 0;
+      margin: 0;
+      background: #ffd700;
+      border-radius: 6px 6px 0 0;
+      border: 1px solid #ccc;
+    }
+    
+    #tabs .ui-tabs-nav li {
+      list-style: none;
+      display: inline-block;
+      margin: 0;
+    }
+    
+    #tabs .ui-tabs-nav a {
+      display: inline-block;
+      padding: 12px 20px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    #tabs .ui-tabs-nav a:hover,
+    #tabs .ui-tabs-active a {
+      background-color: #e6c200;
+    }
+    
+    #tabs > div {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-top: none;
+      background: #fff;
+      border-radius: 0 0 6px 6px;
+    }
+    /* ---------- GLOBAL SECTION HEADINGS ---------- */
+  .contact-section h2,
+  .inspiration-section h2,
+  .weather-section h2,
+  .faq-section h2,
+  .popular-section h2,
+  .explore-section h2,
+  .testimonial-section h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark mode override */
+  body.dark .contact-section h2,
+  body.dark .inspiration-section h2,
+  body.dark .weather-section h2,
+  body.dark .faq-section h2,
+  body.dark .popular-section h2,
+  body.dark .explore-section h2,
+  body.dark .testimonial-section h2 {
+    color:brown;
+    text-shadow: none;
+  }
+  .image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .image-box a::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+  }
+
+  .image-box a:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .image-box img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .image-box:hover img {
+    transform: scale(1.05);
+  }
+
+  .map-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  .map-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    border: 2px solid #333;
+    margin-top: 20px;
+  }
+  #travelNote {
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    resize: none; /* disable default resize handle */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+ 
+
+  @media screen and (max-width: 768px) {
+    .navigation {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
